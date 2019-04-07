@@ -71,9 +71,13 @@ echo "<tr><td colspan=3><b>Total</b></td><td><b>".$total."</b></td><td></td></tr
 echo "</table>";
 
 
-echo "<a href='clearbasket.php'>CLEAR BASKET</a>";
+echo "<p><a href='clearbasket.php'>CLEAR BASKET</a></p>";
+if(isset($_SESSION['userId'])){
+	echo"<p>To Finalise <a href=checkout.php>Checkout</a></p>";
+}
+else{
 echo "<p>New Homteq Customers :<a href='signup.php'>Sign Up</a></p>";
-echo "<p>Returning Homteq Customers :<a href='login.php'>Login</a></p>";
+echo "<p>Returning Homteq Customers :<a href='login.php'>Login</a></p>";}
 include("footfile.html"); //include head layout
 echo "</body>";
 ?>
