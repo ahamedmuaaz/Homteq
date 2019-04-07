@@ -24,7 +24,7 @@ if(!(empty($fname)||empty($lname)||empty($address)||empty($post)||empty($tel)||e
 		 
 		 if(preg_match("/@/",$email)){
 	       
-		   $sql1="INSERT INTO `users`(`userFName`, `userLName`, `userAddress`, `userPostCode`, `userTellNo`, `userEmail`, `userPassword`) VALUES ('$fname','$lname','$address','$post','$tel','$email','$pass')";
+		   $sql1="INSERT INTO `users`( `userType`,`userFName`, `userLName`, `userAddress`, `userPostCode`, `userTellNo`, `userEmail`, `userPassword`) VALUES ('C','$fname','$lname','$address','$post','$tel','$email','$pass')";
 		   $exeSqlstmt=mysqli_query($conn, $sql1);
 		   if(mysqli_errno($conn)==0){
 			   echo "<p><b>You are sucessfully Registered</b></p>";
