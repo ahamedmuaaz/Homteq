@@ -7,6 +7,7 @@ echo "<link rel=stylesheet type=text/css href=mystylesheet.css>"; //Call in styl
 echo "<title>".$pagename."</title>"; //display name of the page as window title
 echo "<body>";
 include ("headfile.html"); //include header layout file
+include('detectlogin.php');
 echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
 if(isset($_POST['delid'])){
