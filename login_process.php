@@ -29,6 +29,10 @@ if(!(empty($email)||empty($pass))){
 			echo "<p>Continue Shopping <a href=index.php>Homteq</a></p>";
 			echo "<p>View Your <a href=basket.php>Smart Basket</a></p>";
 			}
+			if($_SESSION['userType']=="A"){
+				echo "<p>You have Sucessfully Logged in as Homteq Administrator</p>";
+				echo "<p>Continue Shopping <a href=index.php>Homteq</a></p>";
+			}
 		}
 		else{
 			echo "<p>Password not recognised, login again</p>";
